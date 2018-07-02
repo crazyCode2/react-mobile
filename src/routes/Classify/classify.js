@@ -4,7 +4,6 @@
 import React,{ PureComponent } from 'react';
 
 import Tloader from '../../components/Tloader';
-// import Tloader from 'react-touch-loader';
 
 import Styles from './classify.less';
 

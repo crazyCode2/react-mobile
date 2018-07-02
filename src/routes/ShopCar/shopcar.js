@@ -2,6 +2,7 @@
  * 购物车
  */
 import React,{ PureComponent } from 'react';
+import { NavBar, Icon } from 'antd-mobile';
 import './ShopCar.less';
 
 class ShopCar extends PureComponent {
@@ -14,6 +15,11 @@ class ShopCar extends PureComponent {
   render(){
     return (
       <div>
+        <NavBar
+          rightContent={[
+            <Icon key="0" type="search" />
+          ]}
+        >购物车</NavBar>
         <p>购物车</p>
       </div>
     )
