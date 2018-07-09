@@ -9,8 +9,6 @@ import 'antd-mobile/lib/tab-bar/style/index.css';
 import 'antd-mobile/lib/badge/style/index.css';
 import Styles from './index.less';
 
-import home1 from '../../assets/home1.png';
-
 class WxTabBar extends PureComponent {
   state = {
     selectedTab: 'home'
@@ -35,7 +33,7 @@ class WxTabBar extends PureComponent {
                   <div className="am-tab-bar-tab-icon">
                     <span className="am-badge am-tab-bar-tab-badge tab-badge">
                       {
-                        this.state.selectedTab == item.key?
+                        this.state.selectedTab === item.key?
                         <div style={{width: "22px", height: "22px", background: `url(${item.selectedIcon}) center center / 21px 21px no-repeat`}}></div>
                         :
                         <div style={{width: "22px", height: "22px", background: `url(${item.icon}) center center / 21px 21px no-repeat`}}></div>
@@ -43,7 +41,7 @@ class WxTabBar extends PureComponent {
                       {/* <sup className="am-badge-text">1</sup> */}
                     </span>
                   </div>
-                  <p className="am-tab-bar-tab-title" style={{color: this.state.selectedTab == item.key?item.tintColor:item.unselectedTintColor}}>{item.name}</p>
+                  <p className="am-tab-bar-tab-title" style={{color: this.state.selectedTab === item.key?item.tintColor:item.unselectedTintColor}}>{item.name}</p>
                 </Link>
               </div>
             ))

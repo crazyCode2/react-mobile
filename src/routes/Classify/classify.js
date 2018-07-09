@@ -2,10 +2,12 @@
  * 分类
  */
 import React,{ PureComponent } from 'react';
-
+// 顶部导航 组件
+import { NavBar, Icon } from 'antd-mobile';
+// 下拉刷新/下拉加载更多 组件
 import Tloader from '../../components/Tloader';
 
-import Styles from './classify.less';
+import Styles from './Classify.less';
 
 // 设置视图滚动区域
 let mainStyle = {
@@ -24,17 +26,26 @@ class Classify extends PureComponent {
       hasMore: 0,
       initializing: 1
     }
+    this.flag = false;
   }
 
   // 生命周期--组件挂载完毕
   componentDidMount() {
-    setTimeout(() => {
-      this.setState({
-        listLen: 9,
-        hasMore: 1,
-        initializing: 2, // initialized
-      });
-    }, 2000);
+    console.log(this.flag);
+    if(!this.flag){
+      setTimeout(() => {
+        this.setState({
+          listLen: 9,
+          hasMore: 1,
+          initializing: 2, // initialized
+        });
+      }, 2000);
+    }
+  }
+
+  // 生命周期--组件将要卸载
+  componentWillUnmount(){
+    this.flag = true;
   }
 
   // 下拉刷新
@@ -80,6 +91,13 @@ class Classify extends PureComponent {
     }
     return (
       <div className={Styles.view}>
+        <NavBar
+          mode="light"
+          rightContent={[
+            <Icon key="0" type="search" />
+          ]}
+        >分类</NavBar>
+
         <Tloader
           classStyle={mainStyle}
           onRefresh={(resolve, reject) => this.refresh(resolve, reject)}

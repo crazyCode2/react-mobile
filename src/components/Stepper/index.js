@@ -14,7 +14,7 @@ class Stepper extends PureComponent {
   }
 
   subtract = ()=>{
-    if(this.state.currValue != 1){
+    if(this.state.currValue !== 1){
       this.props.onnums(this.state.currValue -1)
 
       this.setState({
@@ -38,7 +38,7 @@ class Stepper extends PureComponent {
         <button
           onClick={this.subtract}
           className={classNames(Styles.wx_stepper__stepper,Styles.wx_stepper__minus,Styles.wx_stepper__stepper_1,
-            this.state.currValue == 1?
+            this.state.currValue === 1?
             Styles.wx_stepper__stepper__minus_disabled:"",)}>
         </button>
         <input className={Styles.wx_stepper__input} readOnly value={this.state.currValue} />

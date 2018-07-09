@@ -11,9 +11,7 @@ import {Switch,Route,Redirect} from 'react-router-dom';
 // 获取路由数据
 import {getRouterData} from '../common/router';
 
-import Styles from './BaseLayout.less';
-// 首页
-import Home from '../routes/Home/home';
+// import Styles from './BaseLayout.less';
 // 底部 tabbar
 import WxTabBar from '../components/TabBar';
 
@@ -46,8 +44,6 @@ class BaseLayout extends PureComponent{
 
   render(){
     const bashRedirect = this.getBashRedirect();
-    const { match } = this.props;
-    console.log(match);
 
     return (
       <div>

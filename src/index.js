@@ -10,7 +10,7 @@ import { render } from 'react-dom';
  * Provider 提供的是一个顶层容器的作用，实现store的上下文传递
  * connect 可以把state和dispatch绑定到react组件，使得组件可以访问到redux的数据
  */
-import { connect, Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 import store ,{history} from './store';
 /**
  * react-router-redux
@@ -26,7 +26,7 @@ import { Route, Switch } from 'react-router-dom';
 // 基础页面布局
 import BaseLayout from './layouts/BaseLayout';
 
-import './index.css'; 
+import './index.css';
 
 render(
   <Provider store={store}>

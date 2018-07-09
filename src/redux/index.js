@@ -1,7 +1,7 @@
 /**
  * redux 同步 入口文件
  */
-import React from 'react'
+// import React from 'react'
 import { combineReducers } from 'redux';
 import {
   routerReducer,

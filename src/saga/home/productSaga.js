@@ -1,7 +1,7 @@
 /**
  * 产品 异步数据
  */
-import { put,takeLatest,call,select } from 'redux-saga/effects'
+import { put,takeLatest,call } from 'redux-saga/effects'
 import {getproduct_1} from '../../services/api'
 
 function* productList_1(){
@@ -14,7 +14,7 @@ function* productList_1(){
 }
 
 function* productSaga(){
-  yield takeLatest('getproduct_1',productList_1)   
+  yield takeLatest('getproduct_1',productList_1)
 }
-   
+
 export default productSaga;

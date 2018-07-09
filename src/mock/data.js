@@ -14,7 +14,7 @@ import p3 from '../assets/p3.png'
 import p4 from '../assets/p4.jpg'
 import p5 from '../assets/p5.jpg'
 
-const Random = Mock.Random;
+// const Random = Mock.Random;
 
 // 轮播图 数据
 const banner= Mock.mock('/api/banner',[

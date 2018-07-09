@@ -17,7 +17,7 @@ class ShortCut extends  PureComponent {
           data.map((item,index)=>(
             <div key={index}>
               <Link to={item.url}>
-                <img  src={item.img} />
+                <img  src={item.img} alt="" />
               </Link>
             </div>
           ))

@@ -1,7 +1,7 @@
 /**
  * banner redux 异步数据
  */
-import { put,takeLatest,call,select } from 'redux-saga/effects'
+import { put,takeLatest,call } from 'redux-saga/effects'
 import { getBanners } from '../../services/api'
 
 function* getBannerList(){
@@ -11,7 +11,7 @@ function* getBannerList(){
     {
       type:'getBannerListRedux',
       payload:res.data,
-    }   
+    }
   )
 }
 

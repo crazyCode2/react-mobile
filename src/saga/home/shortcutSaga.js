@@ -1,7 +1,10 @@
 /**
  * 快捷链接 异步数据
  */
-import { put,takeLatest,call,select } from 'redux-saga/effects'
+/**
+ * put,takeLatest,call,select
+ */
+import { put,takeLatest,call } from 'redux-saga/effects'
 import {getShortcutList} from '../../services/api'
 
 function* getShortcutSagaList(){
@@ -14,7 +17,7 @@ function* getShortcutSagaList(){
 }
 
 function* shortcutSaga(){
-  yield takeLatest('getShortcutSagaList',getShortcutSagaList)   
+  yield takeLatest('getShortcutSagaList',getShortcutSagaList)
 }
-   
+
 export default shortcutSaga;

@@ -19,7 +19,7 @@ class ImageAd extends PureComponent {
       // 图片广告
       <div className={Styles.image_ad_container}>
         <Link to={imgurl} >
-          <img src={imgsrc} />
+          <img src={imgsrc} alt="" />
         </Link>
       </div>
     )

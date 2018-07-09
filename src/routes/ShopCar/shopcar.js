@@ -11,16 +11,18 @@ class ShopCar extends PureComponent {
     super(props);
     this.state = {};
   }
-  
+
+  // 跳转详情页
+  goDetail() {
+    //
+  }
+
   render(){
     return (
       <div>
-        <NavBar
-          rightContent={[
-            <Icon key="0" type="search" />
-          ]}
-        >购物车</NavBar>
-        <p>购物车</p>
+        {/*顶部导航栏*/}
+        <NavBar mode="light">购物车</NavBar>
+        <p onClick={this.goDetail.bind(this)}>详情</p>
       </div>
     )
   }

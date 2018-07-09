@@ -1,7 +1,13 @@
 /**
  * redux 异步入口文件
  */
-import { put,takeEvery,fork,all } from 'redux-saga/effects';
+/**
+ * put 作用和dispatch相同
+ * takeEvery
+ * fork
+ * all
+ */
+import { fork, all } from 'redux-saga/effects';
 // 全局 异步数据
 import globalSaga from './globalSaga';
 // 轮播图

@@ -55,7 +55,7 @@ class Tloader extends React.Component {
   // 开始滑动
   touchStart(e) {
     if (!this.canRefresh()) return;
-    if (e.touches.length == 1) this._initialTouch = {
+    if (e.touches.length === 1) this._initialTouch = {
       clientY: e.touches[0].clientY,
       scrollTop: this.refs.panel.scrollTop
     };
@@ -90,7 +90,7 @@ class Tloader extends React.Component {
       pullHeight: 0
     };
 
-    if (this.state.loaderState == STATS.enough) {
+    if (this.state.loaderState === STATS.enough) {
       // refreshing
       this.setState({
         loaderState: STATS.refreshing,
@@ -123,7 +123,7 @@ class Tloader extends React.Component {
     if (
       this.props.autoLoadMore &&
       this.props.hasMore &&
-      this.state.loaderState != STATS.loading
+      this.state.loaderState !== STATS.loading
     ) {
       let panel = e.currentTarget;
       let scrollBottom = panel.scrollHeight - panel.clientHeight - panel.scrollTop;
@@ -141,7 +141,7 @@ class Tloader extends React.Component {
   animationEnd() {
     var newState = {};
 
-    if (this.state.loaderState == STATS.refreshed) newState.loaderState = STATS.init;
+    if (this.state.loaderState === STATS.refreshed) newState.loaderState = STATS.init;
     if (this.props.initializing > 1) newState.progressed = 1;
 
     this.setState(newState);
