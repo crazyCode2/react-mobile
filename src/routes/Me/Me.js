@@ -9,6 +9,17 @@ class Me extends PureComponent {
     super(props);
     this.state = {};
   }
+
+  // 跳转详情页
+  goDetail() {
+    this.props.history.push({
+      pathname:'/meDetail',
+      params:{
+        name:'jack'
+      }
+    });
+  }
+
   render(){
     return(
       <div>
@@ -18,7 +29,7 @@ class Me extends PureComponent {
             <Icon key="0" type="search" />
           ]}
         >我的</NavBar>
-        <p>我的</p>
+      <p onClick={() => this.goDetail()}>跳转我的详情页</p>
       </div>
     )
   }

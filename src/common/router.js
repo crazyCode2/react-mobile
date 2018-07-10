@@ -11,6 +11,8 @@ import ShopCar from '../routes/ShopCar/ShopCar';
 import ShopCarDetail from '../routes/ShopCar/ShopCarDetail';
 // 我的
 import Me from '../routes/Me/Me';
+// 我的详情
+import MeDetail from '../routes/Me/MeDetail';
 // 基础布局
 // import BasicLayout from '../layouts/BaseLayout';
 
@@ -40,6 +42,11 @@ export const getRouterData = () => {
     {
       path:'/me',
       component:Me,
+    },
+    // 我的详情
+    {
+      path:'/meDetail',
+      component:MeDetail,
     }
   ]
 

@@ -2,8 +2,11 @@
  * 购物车详情
  */
 import React,{ PureComponent } from 'react';
-import { NavBar, Icon } from 'antd-mobile';
+import { NavBar, Icon, Button, List } from 'antd-mobile';
+import Header from '../../components/Header';
 import './ShopCarDetail.less';
+
+const Item = List.Item;
 
 class ShopCarDetail extends PureComponent {
   // 构造函数
@@ -17,16 +20,25 @@ class ShopCarDetail extends PureComponent {
     window.history.go(-1);
   }
 
+  // 跳转历史页
+  handleHistory = () => {
+    alert(1);
+  }
+
   render(){
     return (
       <div>
         {/*顶部导航栏*/}
-        <NavBar
-          mode="light"
-          icon={<Icon type="left" />}
-          onLeftClick={() => this.goBack()}
-        >详情页</NavBar>
-        <p>详情页</p>
+        <Header title={'已选定人员'} />
+        {/*人员列表*/}
+        <List className="my-list">
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+          <Item arrow="horizontal" extra={'extra content'}>Title</Item>
+        </List>
       </div>
     )
   }
