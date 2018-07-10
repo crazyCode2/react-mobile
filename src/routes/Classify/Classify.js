@@ -38,7 +38,7 @@ class Classify extends PureComponent {
           hasMore: 1,
           initializing: 2, // initialized
         });
-      }, 2000);
+      }, 500);
     }
   }
 
