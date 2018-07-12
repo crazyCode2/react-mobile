@@ -1,5 +1,5 @@
 const { injectBabelPlugin, getLoader } = require('react-app-rewired');
- 
+
 const fileLoaderMatcher = function (rule) {
   return rule.loader && rule.loader.indexOf(`file-loader`) != -1;
 }
@@ -14,7 +14,7 @@ module.exports = {
       "style": true
     },
     ], config);
-  
+
     // customize theme
     config.module.rules[1].oneOf.unshift(
       {
@@ -52,7 +52,7 @@ module.exports = {
         ]
       }
     );
-  
+
     config.module.rules[1].oneOf.unshift(
       {
         test: /\.less$/,
@@ -97,7 +97,7 @@ module.exports = {
         ]
       }
     );
-  
+
     // css-modules
     config.module.rules[1].oneOf.unshift(
       {
@@ -150,5 +150,8 @@ module.exports = {
       config.disableHostCheck = true;
       return config;
     }
+  },
+  externals: {
+    BMap: "BMap"
   },
 }

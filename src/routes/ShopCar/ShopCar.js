@@ -3,8 +3,8 @@
  */
 import React,{ PureComponent } from 'react';
 import { NavBar, Icon } from 'antd-mobile';
-import Button from '@material-ui/core/Button';
-import './ShopCar.less';
+// 引入百度地图组件
+import BMap from '../../components/BMap';
 
 class ShopCar extends PureComponent {
   // 构造函数
@@ -28,9 +28,8 @@ class ShopCar extends PureComponent {
       <div>
         {/*顶部导航栏*/}
         <NavBar mode="light">购物车</NavBar>
-        <Button onClick={this.goDetail.bind(this)} variant="raised" color="primary">
-          跳转详情页
-        </Button>
+        {/*百度地图*/}
+        <BMap />
       </div>
     )
   }
